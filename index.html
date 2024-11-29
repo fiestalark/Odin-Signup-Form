@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    
 </head>
 <body>
     <div class="container">
         <div class="left">
             <div class="logo-banner">
-                <div class="logo">
-                    Logo Placeholder
-                </div>
+                <img src="odin-lined.png" alt="Odin Logo" class="logo-image">
+                <div class="logo">ODIN</div>
             </div>
             <p class="image-credit">
                 Photo by XX on Unsplash
@@ -24,25 +24,44 @@
                 <h2>You know you want to</h2>
                 <h2>Come on, just do it</h2>
             </div>
-            <div class="form">
+            <div class="form-container">
                 <h2>Let's do this!</h2>
                 <form action="">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name">
-                    <label for="first-name">Email</label>
-                    <input type="email" id="email">
-                    <label for="phone-number">Phone Number</label>
-                    <input type="number">
-                    <label for="password">Password</label>
-                    <input type="password" id="password">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                            <span class="error-message">* Passwords do not match</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password">
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="bottom">
-                <button>Create Account</button>
+                <button id="create-account">Create Account</button>
                 <p class="log-in">Already have an account? Log in</p>
             </div>
         </div>

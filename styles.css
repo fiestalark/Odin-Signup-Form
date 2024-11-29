@@ -7,45 +7,115 @@
 html {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+@font-face {
+    font-family: 'Norse';
+    src: url('https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
 .container {
     display: flex;
     flex-direction: row;
+    min-height: 100vh;
 }
 
 .left {
     background: url('left-image.jpg');
-    background-size: 100vh;
-    width: 30%;
-    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    position: relative;
 }
 .logo-banner {
-    background: black;
-    opacity: .5;
+    background: rgba(0, 0, 0, 0.5);
     height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     position: relative;
     top: 18%;
 }
+.logo-image {
+    height: 70%;
+}
 .logo {
     opacity: 1 !important;
-    font-size: 40px;
-
+    font-size: 64px;
+    font-family: Norse, sans-serif;
+}
+.image-credit {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
 }
 .right {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    background-color: #f9fafb;
 }
 .top {
     height: 36vh;
+}
+.top h2 {
+    font-size: 24px;
+    margin-bottom: 2vh;
+}
+.top, .bottom, .form-container {
+    padding: 2vw;
 }
 .top, .bottom {
     background-color: lightgray;
     width: 70vw;
 }
-.form {
+.form-container {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 40vh;
     width: 70vw;
+    display: grid;
+    gap: 20px;
+}
+.form-container h2 {
+    margin-bottom: 1vh;
+}
+.form-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 3vh;
+
+}
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 0.7px;
+}
+input {
+    padding: 1vh 1vw;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 .bottom {
     height: 24vh;
+}
+#create-account {
+    padding: 1.5vh 2vw;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 2vh;
+    background-color: #b8d586;
 }
