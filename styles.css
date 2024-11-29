@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    background: url('left-image.jpg');
+    background-size: 100vh;
+    width: 30%;
+    height: 100vh;
+}
+.logo-banner {
+    background: black;
+    opacity: .5;
+    height: 18%;
+    color: white;
+    position: relative;
+    top: 18%;
+}
+.logo {
+    opacity: 1 !important;
+    font-size: 40px;
+
+}
+.right {
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    height: 36vh;
+}
+.top, .bottom {
+    background-color: lightgray;
+    width: 70vw;
+}
+.form {
+    height: 40vh;
+    width: 70vw;
+}
+.bottom {
+    height: 24vh;
+}
