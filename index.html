@@ -15,7 +15,7 @@
                 <div class="logo">ODIN</div>
             </div>
             <p class="image-credit">
-                Photo by XX on Unsplash
+                Photo by <a href="https://unsplash.com/@suzanne_ella">Suzanne Rushton</a> on <a href="https://unsplash.com/photos/a-small-waterfall-in-the-middle-of-a-forest-1S2pRKA5_1U">Unsplash</a>
             </p>
         </div>
         <div class="right">
@@ -40,22 +40,45 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email">
+                            <input type="email" 
+                                   id="email" 
+                                   required
+                                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                   title="Please enter a valid email address">
                         </div>
+                        
                         <div class="form-group">
                             <label for="phone-number">Phone Number</label>
-                            <input type="tel" id="phone-number">
+                            <input type="tel" 
+                                   id="phone-number"
+                                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                   title="Please enter a phone number in format: 123-456-7890"
+                                   placeholder="123-456-7890">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password">
-                            <span class="error-message">* Passwords do not match</span>
+                            <label for="password">
+                                Password
+                                <span class="info-icon" data-tooltip="Must contain at least:
+                                    • 8 characters
+                                    • One uppercase letter
+                                    • One lowercase letter
+                                    • One number">ⓘ</span>
+                            </label>
+                            <input type="password" 
+                                   id="password" 
+                                   required 
+                                   minlength="8" 
+                                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                         </div>
                         <div class="form-group">
                             <label for="confirm-password">Confirm Password</label>
-                            <input type="password" id="confirm-password">
+                            <input type="password" 
+                                    id="confirm-password" 
+                                    required
+                                    minlength="8"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                         </div>
                     </div>
                 </form>
